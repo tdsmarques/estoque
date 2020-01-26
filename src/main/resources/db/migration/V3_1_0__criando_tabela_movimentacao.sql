@@ -4,6 +4,6 @@ CREATE TABLE mysqldb.movimentacao (
     idCliente int,
     tipoMovimentacao int,
     qtdMovimentacao int,
-    FOREIGN KEY (idProduto) REFERENCES produto(id),
-    FOREIGN KEY (idCliente) REFERENCES cliente(id)
+    FOREIGN KEY (idProduto) REFERENCES mysqldb.produto(id),
+    FOREIGN KEY (idCliente) REFERENCES mysqldb.cliente(id)
 );
