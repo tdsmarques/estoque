@@ -1,9 +1,7 @@
 CREATE TABLE mysqldb.movimentacao (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    idProduto int,
-    idCliente int,
-    tipoMovimentacao int,
-    qtdMovimentacao int,
-    FOREIGN KEY (idProduto) REFERENCES mysqldb.produto(id),
-    FOREIGN KEY (idCliente) REFERENCES mysqldb.cliente(id)
+    id_produto int,
+    id_cliente int,
+    tipo_movimentacao int,
+    qtd_movimentacao int
 );

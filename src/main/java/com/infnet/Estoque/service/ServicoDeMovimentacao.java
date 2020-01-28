@@ -1,4 +1,14 @@
 package com.infnet.Estoque.service;
 
-public class ServicoDeMovimentacao {
+import com.infnet.Estoque.repository.IMovimentacaoRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ServicoDeMovimentacao  {
+
+    private IMovimentacaoRepository repositorioDeMovimentacao;
+
+    public ServicoDeMovimentacao(IMovimentacaoRepository repositorioDeMovimentacao) {
+        this.repositorioDeMovimentacao = repositorioDeMovimentacao;
+    }
 }
