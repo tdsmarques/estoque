@@ -16,19 +16,19 @@ public class Movimentacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "id_produto")
-    private Long idProduto;
-    @Column(name = "id_cliente")
-    private Long idCliente;
+    @Column(name = "nm_produto")
+    private String nomeProduto;
+    @Column(name = "nm_cliente")
+    private String nomeCliente;
     @Column(name = "tipo_movimentacao")
     private TipoMovimentacao tipoMovimentacao;
     @Column(name = "qtd_movimentacao")
     private Long qtdMovimentacao;
 
-    public Movimentacao(Long id, Long idProduto, Long idCliente, TipoMovimentacao tipoMovimentacao, Long qtdMovimentacao ) {
+    public Movimentacao(Long id, String nomeProduto, String nomeCliente, TipoMovimentacao tipoMovimentacao, Long qtdMovimentacao ) {
         this.id = id;
-        this.idProduto = idProduto;
-        this.idCliente = idCliente;
+        this.nomeProduto = nomeProduto;
+        this.nomeCliente = nomeCliente;
         this.tipoMovimentacao = tipoMovimentacao;
         this.qtdMovimentacao = qtdMovimentacao;
     }
@@ -44,20 +44,20 @@ public class Movimentacao {
         this.id = id;
     }
 
-    public Long getIdProduto() {
-        return idProduto;
+    public String getNomeProduto() {
+        return nomeProduto;
     }
 
-    public void setIdProduto(Long idProduto) {
-        this.idProduto = idProduto;
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
     }
 
-    public Long getIdCliente() {
-        return idCliente;
+    public String getNomeCliente() {
+        return nomeCliente;
     }
 
-    public void setIdCliente(Long idCliente) {
-        this.idCliente = idCliente;
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
     }
 
     public TipoMovimentacao getTipoMovimentacao() {

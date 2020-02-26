@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+}
+.titulo{
+    color: red !important;
+}
+
+.container {
+    padding: 50px;
+}
+
+.btn-success {
+    float: left;
+    margin: 20px;
+}
+
+table.comBordaSimples {
+    border-collapse: collapse;
+    background: #FFFFF0;
+}
+ 
+table.comBordaSimples td {
+    border: 1px solid black;
+    width: 250px;
+}
+ 
+table.comBordaSimples th {
+    border: 1px solid black;
+    background: #F0FFF0;
+}
+

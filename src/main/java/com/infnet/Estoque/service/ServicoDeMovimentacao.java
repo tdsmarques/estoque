@@ -32,8 +32,8 @@ public class ServicoDeMovimentacao  {
     public ResponseEntity atualizarMovimentacao(Movimentacao movimentacao, Long id){
         return repositorio.findById(id)
                 .map(entidade -> {
-                    entidade.setIdCliente(movimentacao.getIdCliente());
-                    entidade.setIdProduto(movimentacao.getIdProduto());
+                    entidade.setNomeCliente(movimentacao.getNomeCliente());
+                    entidade.setNomeProduto(movimentacao.getNomeProduto());
                     entidade.setQtdMovimentacao(movimentacao.getQtdMovimentacao());
                     entidade.setTipoMovimentacao(movimentacao.getTipoMovimentacao());
                     Movimentacao updated = repositorio.save(entidade);

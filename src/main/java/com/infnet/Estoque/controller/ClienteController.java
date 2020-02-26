@@ -35,6 +35,7 @@ public class ClienteController {
     public Cliente adicionar(@RequestBody Cliente cliente){
         return servico.salvar(cliente);
     }
+
     @PutMapping(value="/{id}")
     public ResponseEntity atualizar(@PathVariable("id") long id, @RequestBody Cliente cliente) {
         return servico.atualizarCliente(cliente, id);

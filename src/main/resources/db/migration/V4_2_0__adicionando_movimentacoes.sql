@@ -1,3 +1,3 @@
-INSERT INTO mysqldb.movimentacao (id_produto, tipo_movimentacao, id_cliente, qtd_movimentacao)
-VALUES (1, 0, 1, 10),
-       (2, 0, 2, 30);
+INSERT INTO mysqldb.movimentacao (nm_produto, tipo_movimentacao, nm_cliente, qtd_movimentacao)
+VALUES ('CANETA BIC', 0, 'ANTONIO FIGUEREDO', 10),
+       ('FARINHA DE TRIGO', 0, 'FABRICA DONA BENTA', 30);
