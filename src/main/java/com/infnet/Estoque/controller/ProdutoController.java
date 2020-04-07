@@ -23,32 +23,32 @@ public class ProdutoController {
     @Autowired
     ServicoDeProduto servico;
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "*")
     @GetMapping
     public List<Produto> listar(){
         return servico.listarTodos();
     }
 
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "*")
     @GetMapping(path = {"/{id}"})
     public ResponseEntity buscarPorID(@PathVariable Long id){
         return servico.buscarPorID(id);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "*")
     @PostMapping
     public Produto produto(@RequestBody Produto produto){
         return servico.salvar(produto);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "*")
     @PutMapping(value="/{id}")
     public ResponseEntity atualizar(@PathVariable("id") long id, @RequestBody Produto produto) {
         return servico.atualizarProduto(produto, id);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "*")
     @DeleteMapping(path ={"/{id}"})
     public ResponseEntity deletar(@PathVariable long id){
         return  servico.deletarProduto(id);
