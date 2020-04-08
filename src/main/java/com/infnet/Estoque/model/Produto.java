@@ -17,13 +17,15 @@ public class Produto {
     private String unidade;
     private Long quantidade;
     private boolean perecivel;
+    private String data_vencimento;
 
-    public Produto(Long id, String nome, String unidade, Long quantidade, boolean perecivel) {
+    public Produto(Long id, String nome, String unidade, Long quantidade, boolean perecivel, String data_vencimento) {
         this.id = id;
         this.nome = nome;
         this.unidade = unidade;
         this.quantidade = quantidade;
         this.perecivel = perecivel;
+        this.data_vencimento = data_vencimento;
     }
 
     public Produto() {
@@ -67,5 +69,13 @@ public class Produto {
 
     public void setPerecivel(boolean perecivel) {
         this.perecivel = perecivel;
+    }
+
+    public String getData_vencimento() {
+        return data_vencimento;
+    }
+
+    public void setData_vencimento(String data_vencimento) {
+        this.data_vencimento = data_vencimento;
     }
 }

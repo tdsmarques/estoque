@@ -36,6 +36,7 @@ public class ServicoDeProduto {
                     entidade.setUnidade(produto.getUnidade());
                     entidade.setQuantidade(produto.getQuantidade());
                     entidade.setPerecivel(produto.isPerecivel());
+                    entidade.setData_vencimento(produto.getData_vencimento());
                     Produto updated = repositorio.save(entidade);
                     return ResponseEntity.ok().body(updated);
                 }).orElse(ResponseEntity.notFound().build());

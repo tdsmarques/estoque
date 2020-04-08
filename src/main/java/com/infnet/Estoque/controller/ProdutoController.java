@@ -4,6 +4,7 @@ import com.infnet.Estoque.model.Produto;
 import com.infnet.Estoque.service.ServicoDeProduto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,25 +23,31 @@ public class ProdutoController {
     @Autowired
     ServicoDeProduto servico;
 
+    @CrossOrigin()
     @GetMapping
     public List<Produto> listar(){
         return servico.listarTodos();
     }
 
+    @CrossOrigin()
     @GetMapping(path = {"/{id}"})
     public ResponseEntity buscarPorID(@PathVariable Long id){
         return servico.buscarPorID(id);
     }
 
+    @CrossOrigin()
     @PostMapping
     public Produto produto(@RequestBody Produto produto){
         return servico.salvar(produto);
     }
-    @PutMapping(value="/{id}")
+
+    @CrossOrigin()
+    @PutMapping(path ={"/{id}"})
     public ResponseEntity atualizar(@PathVariable("id") long id, @RequestBody Produto produto) {
         return servico.atualizarProduto(produto, id);
     }
 
+    @CrossOrigin()
     @DeleteMapping(path ={"/{id}"})
     public ResponseEntity deletar(@PathVariable long id){
         return  servico.deletarProduto(id);

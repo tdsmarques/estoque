@@ -3,5 +3,6 @@ CREATE TABLE mysqldb.produto (
     nome varchar(20),
     unidade varchar(50),
     quantidade int,
-    perecivel boolean
+    perecivel boolean,
+    data_vencimento varchar(50)
 );
